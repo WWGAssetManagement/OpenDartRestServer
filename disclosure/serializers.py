@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import (
-    CorpCodeModel
+    CorpCodeModel,
+    DartListModel,
 )
 
 
@@ -16,3 +17,7 @@ class CorpCodeSerializer(serializers.ModelSerializer):
     stock_code = serializers.CharField(required=False, allow_blank=True)
 
 
+class DartListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DartListModel
+        fields = '__all__'
