@@ -17,9 +17,9 @@ class DartListModel(models.Model):
     corp_code = models.CharField(max_length=10)
     corp_name = models.CharField(max_length=40, null=True)
     stock_code = models.CharField(max_length=8, null=True)
-    corp_cls = models.CharField(max_length=3, null=True)
+    corp_cls = models.TextField(null=True)
     report_name = models.CharField(max_length=40, null=True)
     fir_nm = models.CharField(max_length=20, null=True)
     rcept_dt = models.DateTimeField()
-
+    rm = models.CharField(max_length=5, null=True)
 
