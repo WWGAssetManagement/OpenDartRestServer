@@ -15,11 +15,11 @@ class CorpCodeModel(models.Model):
 class DartListModel(models.Model):
     rcept_no = models.CharField(max_length=40, primary_key=True)
     corp_code = models.CharField(max_length=10)
-    corp_name = models.CharField(max_length=40, null=True)
-    stock_code = models.CharField(max_length=8, null=True)
+    corp_name = models.CharField(max_length=40, null=True, db_index=True)
+    stock_code = models.CharField(max_length=8, null=True, db_index=True)
     corp_cls = models.TextField(null=True)
     report_name = models.CharField(max_length=40, null=True)
     fir_nm = models.CharField(max_length=20, null=True)
-    rcept_dt = models.DateTimeField()
+    rcept_dt = models.DateTimeField(db_index=True)
     rm = models.CharField(max_length=5, null=True)
 
