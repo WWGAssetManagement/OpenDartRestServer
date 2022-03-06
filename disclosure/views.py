@@ -10,13 +10,14 @@ from .models import (
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
-
+from .pagination import PostPageNumberPagination
 
 # Create your views here.
 
 class CorpCodeView(viewsets.ModelViewSet):
     queryset = CorpCodeModel.objects.all()
     serializer_class = CorpCodeSerializer
+    pagination_class = PostPageNumberPagination
 
 
 class DartListView(viewsets.ModelViewSet):
